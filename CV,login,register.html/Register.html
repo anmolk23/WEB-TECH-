@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In to My Page </title>
+</head>
+
+<style>
+    * {
+        color: black;
+        font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+
+    body {
+        background: linear-gradient(90deg, rgb(217, 0, 255), #ffffff);
+    }
+
+    form {
+        background-color: white;
+    }
+
+    #signinpage {
+        border: 2px solid rgb(217, 0, 255);
+        border-radius: 10px;
+        display: inline-block;
+        padding-bottom: 10px;
+        background-color: white;
+    }
+
+    #image {
+        border-radius: 2rem 2rem 2rem 2rem;
+    }
+
+    h3 {
+        color: rgb(217, 0, 255);
+        margin: 5px;
+    }
+
+    #profilehead {
+        text-align: center;
+        margin-top: 5px;
+        padding: 0px 25px;
+    }
+
+    #usernamelabel {
+        position: relative;
+        top: 0px;
+        left: -33px;
+        color: #d900ff;
+        background-color: white;
+    }
+
+    #username {
+        color: rgb(217, 0, 255);
+        background-color: rgb(255, 255, 255);
+        margin-top: 0px;
+        border-radius: 5px;
+        border: 1px solid rgb(217, 0, 255);
+    }
+
+    #username:hover {
+        color: white;
+        background-color: rgb(217, 0, 255);
+        opacity: 1;
+        border: 1px solid rgb(217, 0, 255);
+        border-color: #ffffff;
+    }
+
+    #maillabel {
+        position: relative;
+        top: 0px;
+        left: -50px;
+        color: #d900ff;
+        background-color: white;
+    }
+
+    #mailname {
+        color: rgb(217, 0, 255);
+        background-color: white;
+        margin-top: 0px;
+        border-radius: 5px;
+        border: 1px solid rgb(217, 0, 255);
+    }
+
+    #mailname:hover {
+        color: rgb(255, 255, 255);
+        background-color: rgb(217, 0, 255);
+        opacity: 1;
+        border: 2px solid rgb(255, 255, 255);
+    }
+
+    #passwordlabel {
+        position: relative;
+        top: 0px;
+        left: -35px;
+        color: rgb(217, 0, 255);
+        background-color: white;
+        margin: 0px 0px;
+        padding: 0px 0px;
+    }
+
+    #password {
+        border-radius: 5px;
+        border: 1px solid rgb(217, 0, 255);
+        color: rgb(217, 0, 255);
+        background-color: white;
+        margin: 0px 0px;
+    }
+
+    #password:hover {
+        color: white;
+        background-color: rgb(217, 0, 255);
+        opacity: 1;
+        border: 2px solid rgb(217, 0, 255);
+        border-color: #ffffff;
+    }
+
+    #cpwlabel {
+        position: relative;
+        top: 0px;
+        left: -7px;
+        color: rgb(217, 0, 255);
+        background-color: white;
+        margin: 0px 0px;
+        padding: 0px 0px;
+    }
+
+    #cpw {
+        border-radius: 5px;
+        border: 1px solid rgb(217, 0, 255);
+        color: #d900ff;
+        background-color: white;
+        margin: 0px 0px;
+    }
+
+    #cpw:hover {
+        color: white;
+        background-color: rgb(217, 0, 255);
+        opacity: 1;
+        border: 1px solid rgb(217, 0, 255);
+        border-color: #ffffff;
+    }
+
+    #signinhere {
+        color: rgb(255, 255, 255);
+        background-color: #d900ff;
+        border-radius: 5px;
+        padding: 2px 50px;
+        text-decoration: none;
+    }
+
+    #signinhere:hover {
+        background-color: #ffffff;
+        opacity: 1;
+        color: #d900ff;
+        border: 1px solid rgb(217, 0, 255)
+    }
+
+    p {
+        font-size: 10px;
+        margin: 20px 0px;
+    }
+
+    #login {
+        color: blue;
+    }
+
+    #home {
+        color: rgb(255, 255, 255);
+        font-size: 8px;
+        padding: 2px 4px;
+        background-color: rgb(217, 0, 255);
+        border-radius: 5px;
+        border-color: #d900ff;
+        position: relative;
+        top: -390px;
+        left: 87px;
+        text-decoration: none;
+    }
+
+    #home:hover {
+        background-color: #ffffff;
+        opacity: 1;
+        color: #d900ff;
+        border: 1px solid rgb(217, 0, 255);
+        border-color: rgb(217, 0, 255);
+    }
+</style>
+
+<body>
+
+ <div id="signinpage">
+    
+        <div id="profilehead">
+            <img id="image"
+                src="https://avatars.githubusercontent.com/u/226252512?s=400&u=9779a2a25a0ced8c2daeed583c67bd020f1f8388&v=4"
+                height="40px" width="40px">
+            <h3>Sign In to my page</h3>
+        </div>
+
+        <form>
+
+            <div>
+                <label id="maillabel">Email:</label>
+                <br>
+                <input type="email" placeholder="Enter email" id="mailname">
+            </div>
+
+            <div id="usernamesizing">
+                <label id="usernamelabel">Username:</label>
+                <br>
+                <input type="text" placeholder="Enter Username" id="username">
+            </div>
+
+            <div>
+                <label id="passwordlabel">Password:</label>
+                <br>
+                <input type="password" placeholder="Enter Password" id="password">
+            </div>
+
+            <div id="cpwsizing">
+                <label id="cpwlabel"> Confirm Password:</label>
+                <br>
+                <input type="cpwword" placeholder="Confirm Password" id="cpw">
+            </div>
+
+            <br>
+
+            <div>
+                <a id="signinhere" href="" target="_blank">Sign In</a>
+            </div>
+
+            <a id="home" href="CVprofile.html" target="_blank">Home</a>
+
+            <div>
+                <p>Old user? <a id="login" href="testlogin.html">Login</a></p>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>

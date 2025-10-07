@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab Work making CV with HTML </title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: white;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      animation: shrinkHeader linear both;
+      animation-timeline: scroll(root block);
+      animation-range: 0 200px;
+    }
+
+    .header img {
+
+      border-radius: 0rem 0rem 2rem 0rem;
+      animation: shrinkImage linear both;
+      animation-timeline: scroll(root block);
+      animation-range: 0 200px;
+    }
+
+    .names {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      padding-left: 50px;
+    }
+
+    .names h1,
+    .names h2,
+    .names h3,
+    .names p {
+      transform-origin: right;
+      animation: shrinkText linear both;
+      animation-timeline: scroll(root block);
+      animation-range: 0 200px;
+    }
+
+    @keyframes shrinkHeader {
+      from {
+        height: 150px;
+      }
+
+      to {
+        height: 70px;
+      }
+    }
+    @keyframes shrinkImage {
+      from {
+        width: 150px;
+        height: 150px;
+      }
+
+      to {
+        width: 70px;
+        height: 70px;
+        border-radius: 0rem 1rem 1rem 0rem;
+      }
+    }
+
+    @keyframes shrinkText {
+      from {
+        transform: scale(1);
+        line-height: 1.2;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+
+      to {
+        transform: scale(0.5);
+        line-height: 0.76;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+    }
+
+    @keyframes shrinkHeader {
+      from {
+        height: 150px;
+        background: linear-gradient(90deg, rgb(217, 0, 255), #ffffff);
+        box-shadow: none;
+      }
+
+      to {
+        height: 70px;
+        background: linear-gradient(90deg, rgb(217, 0, 255), rgb(255, 255, 255));
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.255);
+      }
+    }
+
+
+    .content {
+      padding: 20px;
+      line-height: 1.5;
+    }
+
+    #firstname {
+      color: rgb(217, 0, 255);
+      ;
+    }
+
+    #secondname {
+      color: rgb(217, 0, 255);
+      ;
+    }
+
+    #about {
+      color: rgb(255, 255, 255);
+      background-color: rgb(217, 0, 255);
+      border: 2px solid;
+      border-radius: 5px;
+      display: inline;
+      padding: 5px 5px;
+      margin: 0px 0px 0px 0px;
+    }
+
+    #aboutsection {
+      color: rgb(140, 122, 143);
+      padding: 10px 0px 15px 0px;
+      margin: 0px 0px 0px 0px;
+      line-height: 20px;
+    }
+
+     #edu {
+      color: rgb(255, 255, 255);
+      background-color: rgb(217, 0, 255);
+      border: 2px solid rgb(217, 0, 255);
+      border-radius: 5px;
+      display: inline;
+      padding: 5px 5px;
+      box-shadow: 2px 2px ;
+    }
+
+    #edusection {
+      color: rgb(140, 122, 143);
+      padding: 10px 0px 15px 0px;
+      margin: 0px 0px 0px 10px;
+      line-height: 20px;
+    }
+
+    #skill {
+      color: rgb(255, 255, 255);
+      background-color: rgb(217, 0, 255);
+      border: 2px solid rgb(217, 0, 255);
+      border-radius: 5px;
+      display: inline;
+      padding: 5px 5px;
+      box-shadow: 2px 2px ;
+    }
+
+    #skillsection {
+      color: rgb(140, 122, 143);
+      padding: 10px 0px 15px 0px;
+      margin: 0px 0px 0px -1px;
+      line-height: 20px;
+    }
+
+    #contact {
+      color: rgb(255, 255, 255);
+      background-color: rgb(217, 0, 255);
+      border: 2px solid rgb(217, 0, 255);
+      border-radius: 5px;
+      display: inline;
+      padding: 5px 5px;
+      box-shadow: 2px 2px;
+    }
+
+    #contactsection {
+      color: rgb(140, 122, 143);
+      padding: 10px 0px 15px 0px;
+      margin: 0px 0px 0px -13px;
+      line-height: px;
+    }
+
+   #findmesection{
+    color: white;
+    background-color: #d900ff;
+    border: 2px solid rgb(217, 0, 255);
+    border-radius: 5px;
+    padding: 5px 5px;
+    display: inline-flex;
+
+   }
+
+   .socials{
+    padding: 0px 10px;
+   }
+    #btech,
+    #status {
+      color: rgb(140, 122, 143);
+    }
+
+    .login {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+      background-color: rgb(217, 0, 255);
+      color: white;
+      text-decoration: none;
+    }
+
+
+    .login:hover {
+      background-color: #ffffff;
+      opacity: 1;
+      color: #d900ff;
+      border: 1px solid rgb(217, 0, 255);
+      border-color: rgb(217, 0, 255);
+    }
+
+    .register:hover {
+      background-color: rgb(217, 0, 255);
+      opacity: 1;
+      color: #ffffff;
+      border: 1px solid rgb(255, 255, 255);
+      border-color: rgb(217, 0, 255);
+    }
+
+    .register {
+      padding: 10px 15px;
+      margin: 5px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+      background-color: rgb(255, 255, 255);
+      color: rgb(217, 0, 255);
+      border: 1px rgb(217, 0, 255) solid;
+      text-decoration: none;
+    }
+
+    .lr-buttons {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    <img src="https://avatars.githubusercontent.com/u/226252512?s=400&u=9779a2a25a0ced8c2daeed583c67bd020f1f8388&v=4"
+      alt="Profile">
+    <div class="names">
+      <h1 id="firstname">ANMOL</h1>
+      <h2 id="secondname">KUMAR</h2>
+      <h3 id="btech">B.Tech Student</h3>
+      <p id="status">Developer | Coder</p>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <div id="aboutsection">
+      <h2 id="about">About Me</h2>
+      <p>I am a B.Tech CSE student from GCET, Jammu.
+        <br>
+        Ambitious to learn new skills and Technology.
+        <br>
+        Self-Motivated, well versed in Web Development, AI skills and Robotics.
+      </p>
+    </div>
+
+    <h2 id="edu">Education</h2>
+    <div id="edusection">
+    
+      <dl>
+        <b><li>10th</li></b>
+        <dd></dd>MHSS Ramgarh</dd>
+        <b><li>12th</li></b>
+        <dd></dd>GHSS Ramgarh</dd>
+        <b><li>B.Tech</li></b>
+        <dd></dd>GCET Jammu</dd>
+        <b><li>Computer Diploma</li></b>
+        <dd></dd>JKICE Vijaypur</dd>
+
+    </div>
+
+    <h2 id="skill">Skills</h2>
+    <div id="skillsection">
+    
+      <ul>
+        <li>Web Development</li>
+        <li>DSA</li>
+        <li>UI/UX Designer</li>
+      </ul>
+    </div>
+
+    <h2 id="contact">Contact</h2>
+    <div id="contactsection">
+    
+      <ul>
+        <li>+91 9876543210</li>
+        <li>anmolkumar@gmail.com</li>
+      </ul>
+    </div>
+
+    
+    <div id="findme">
+        <h2 id="findmesection">Find Me Here </h2>
+        <div >
+           <a class="socials" href="https:/www.instagram.com/theanuragattri"><img src="https://cdn-icons-png.flaticon.com/128/1384/1384089.png" height="25px" target="_blank"></a>
+           <a class="socials" href="https://github.com/anmolk23"> <img src="https://cdn-icons-png.flaticon.com/128/25/25657.png" height="25px" target="_blank"></a>
+           <a class="socials" href="https://www.snapchat.com/add/its_anmolattri?share_id=sc7U-GBl3vw&locale=en-US"><img src="https://cdn-icons-png.flaticon.com/128/174/174870.png" height="25px"></a>
+        </div>
+    </div>
+
+    <footer>
+      <div class="lr-buttons">
+        <a href="testlogin.html" class="login" target="_blank">LOGIN</a>
+        <a href="register.html" class="register" target="_blank">REGISTER</a>
+      </div>
+</body>
+
+</html>
